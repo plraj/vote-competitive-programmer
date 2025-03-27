@@ -1,0 +1,205 @@
+:root{
+    --headingfont: "WindSong", cursive;
+}
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Kurale&family=Markazi+Text:wght@400..700&family=Modak&family=Mystery+Quest&family=Sarala:wght@400;700&family=WindSong:wght@400;500&display=swap');
+
+.windsong-regular {
+  font-family: "WindSong", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+:root{
+    --headingfont: "WindSong", cursive;
+    --headingfont2: "Funnel Sans", sans-serif;
+}
+.navbar {
+  background-color : #0d1117 !important;
+
+}
+.navbar-collapse a{
+  color: white !important;
+}
+.navbar-collapse  .dropdown-menu a{
+  color: black !important;
+}
+.navbar button{
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+.navbar button:hover{
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}
+
+
+
+
+
+
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 720px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+.box {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+}
+
+.text {
+    padding: 15px;
+}
+
+.text h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+}
+
+.text p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.submit-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-items: center;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+.container{
+  margin-top: 40px;
+}
+.box:focus , .box:hover{
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px solid black;
+}
+.modal-header{
+  text-align: center;
+  display: grid;
+  border-bottom: none !important;
+}
+.modal-header h2{
+  font-size: 20px;
+  background: #babaff94;
+  padding: 10px 10px;
+  margin-inline: auto;
+  border: 2px solid #babaff;
+  border-radius: 6px;
+}
+
+
+
+
+.instagram-login-container {
+
+  padding: 20px;
+
+}
+
+.instagram-logo {
+  font-family: 'Billabong', cursive; /* Instagram-like font */
+  font-size: 50px;
+  text-align: center;
+
+}
+
+.instagram-logo img{
+    width: -webkit-fill-available;
+    max-width: 220px;
+}
+.input-container {
+  margin-bottom: 15px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 3px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0095f6; /* Instagram blue */
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.votedcand{
+    text-align: center;
+}
+.votebtn{
+    display: grid !important;
+    justify-self: center  !important;
+    background: #000000 !important;
+    border: navajowhite !important;
+    color: #ffffff !important;
+    border-radius: 6px !important;
+    border: 2px solid black !important;
+    padding: 5px 20px !important;
+}
+.votebtn:hover , .votebtn:focus{
+    background-color: white !important;
+    color: black !important;
+}
+.gifimg{
+    align-self: center;
+}
+.gifimg img{
+    vertical-align: middle;
+    width: -webkit-fill-available;
+    max-width: 400px;
+}
+
+
+.login-button:disabled {
+    background-color: #60b5f0; /* A lighter shade of blue when disabled */
+    cursor: not-allowed;
+  }
