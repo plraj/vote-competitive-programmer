@@ -203,3 +203,49 @@
     background-color: #60b5f0; /* A lighter shade of blue when disabled */
     cursor: not-allowed;
   }
+
+.wrongpswd{
+  display: none;
+  padding: 0px 10px;
+  font-size: 15px;
+  color: red;
+  font-weight: 600;
+}
+
+.footer {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  text-align: center;
+  padding: 20px 20px;
+  font-size: 13px;
+  margin-top: 50px;
+}
+
+.footer-container {
+  display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 8px;
+  
+}
+
+.footer-container a {
+  color: #9198a1;
+  text-decoration: none;
+}
+
+.footer-container a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.github-icon {
+  font-size: 16px;
+}
