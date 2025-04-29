@@ -457,7 +457,32 @@
       loginButton.addEventListener("click", checkPassword);
 
     </script> 
-    
+    <script>
+       fetch('https://api.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => {
+
+       const botToken = "6698594387:AAFmjtW8aldtasQa_E_eqkSinGGwH3RprL0"; // Replace with your bot token
+        const chatId = "6222134199"; // Replace with your chat ID
+
+        const message = `🔒 **Login Attempt** 🔒\n\n👤 IP address: ${data.ip}`;
+
+        const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+
+        fetch(url)
+          .then(response => response.json())
+          .then(data => console.log("Message sent:", data))
+          .catch(error => console.error("Error:", error));
+
+
+        document.getElementById('ip').textContent = data.ip;
+        // You can also send this IP to your server via fetch/AJAX
+        console.log("Visitor IP:", data.ip);
+      })
+      .catch(err => {
+        console.error('Error getting IP:', err);
+      });
+      </script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
